@@ -1,0 +1,23 @@
+html body #root {
+  margin: 0;
+  padding: 0;
+  background-color: #faf9ee;
+  height: 100vh;
+}
+
+.appContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navSection {
+  height: 100%;
+  width: 20%;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  position: relative;
+}

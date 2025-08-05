@@ -1,0 +1,28 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: rgba(220, 207, 192, 0.4);
+  font-family: "Merriweather", serif;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.title {
+  margin-left: 40px;
+}
+
+.inputBox {
+  margin-right: 40px;
+  height: 30px;
+  width: 15%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.inputBox:focus {
+  outline: none;
+  box-shadow: 0 0 6px 2px #ffaffc80;
+  transition: box-shadow 0.2s ease;
+}
