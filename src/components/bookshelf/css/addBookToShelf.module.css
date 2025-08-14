@@ -1,0 +1,102 @@
+/* AddBookToShelf.module.css */
+
+/* Overlay που καλύπτει όλη την οθόνη */
+.modalOverlay {
+  position: fixed; /* για να "κολλάει" στην οθόνη */
+  top: 0;
+  left: 0;
+  width: 100vw; /* πλήρες πλάτος */
+  height: 100vh; /* πλήρες ύψος */
+  background-color: rgba(0, 0, 0, 0.35); /* ελαφρύ μαύρο φόντο με διάφανοτητα */
+  display: flex;
+  justify-content: center; /* οριζόντια κεντράρισμα */
+  align-items: center; /* κατακόρυφο κεντράρισμα */
+  z-index: 1000; /* για να είναι πάνω από τα υπόλοιπα */
+}
+
+/* Το ίδιο modal, με λίγο μεγαλύτερο μέγεθος */
+.addBookModal {
+  background-color: #faf9ee;
+  border: 2px solid #a2af9b;
+  border-radius: 12px;
+  width: 480px; /* λίγο μεγαλύτερο από 400px */
+  max-width: 90vw; /* responsive για μικρές οθόνες */
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(162, 175, 155, 0.3);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #4b4b4b;
+  box-sizing: border-box;
+}
+
+.modalHeader h2 {
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  color: #a2af9b;
+  text-align: center;
+}
+
+.modalBody label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #5a5a5a;
+}
+
+.modalBody input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1.8px solid #dccfc0;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #eeeeee;
+  color: #4b4b4b;
+  transition: border-color 0.3s ease;
+}
+
+.modalBody input[type="text"]:focus {
+  border-color: #a2af9b;
+  outline: none;
+  background-color: #faf9ee;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.backButton,
+.saveButton {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.backButton {
+  background-color: #dccfc0;
+  color: #5a5a5a;
+}
+
+.backButton:hover {
+  background-color: #a2af9b;
+  color: white;
+}
+
+.saveButton {
+  background-color: #a2af9b;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: #5a6b56;
+}
+
+@media (max-width: 450px) {
+  .addBookModal {
+    width: 90%;
+    padding: 20px 25px;
+  }
+}

@@ -1,0 +1,174 @@
+.wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  z-index: 100000;
+}
+
+.book {
+  width: 85vw;
+  font-family: "Montserrat Alternates", sans-serif;
+  border-bottom: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: default;
+  margin-bottom: 10px;
+}
+
+.book:hover {
+  background-color: #d0f0e0;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(255, 102, 102, 0.2);
+  border-radius: 6px;
+  transform: translateY(-4px) scale(1.03);
+}
+
+.bookInfo {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.bookImage {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bookDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.bookTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+
+.bookAuthor {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+.bookPages {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.bookButtons {
+  display: flex;
+  gap: 1rem;
+  padding-left: 96px;
+}
+
+.noteButton,
+.removeButton {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.noteButton {
+  background-color: #edf2ff;
+  color: #3b5bdb;
+}
+
+.noteButton:hover {
+  background-color: #dbe4ff;
+}
+
+.removeButton {
+  background-color: #fff0f0;
+  color: #c92a2a;
+}
+
+.removeButton:hover {
+  background-color: #ffe3e3;
+}
+.emptyShelfContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* οριζόντιο κέντρο */
+  justify-content: center; /* κατακόρυφο κέντρο */
+  height: 100vh;
+  width: 100%;
+  background-color: #fdf7f0; /* απαλή ζεστή βάση */
+  text-align: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.emptyShelf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.lottieAnimation {
+  width: 280px;
+  height: 280px;
+}
+
+.emptyShelf p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1.2rem;
+  color: #6b5e57; /* πιο ζεστό καφέ */
+}
+
+.emptyShelf .shelfButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.noteButton,
+.removeButton {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 12px; /* πιο boho στρογγυλεμένο */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.noteButton {
+  background-color: #ffe5d9; /* ζεστό ροζ-πορτοκαλί */
+  color: #d46a6a;
+}
+
+.noteButton:hover {
+  background-color: #ffd4c4;
+  transform: translateY(-2px);
+}
+
+.removeButton {
+  background-color: #d0f0e0; /* απαλή πράσινη απόχρωση */
+  color: #2a7f66;
+}
+
+.removeButton:hover {
+  background-color: #b2e8d4;
+  transform: translateY(-2px);
+}

@@ -11,13 +11,15 @@ html body #root {
   display: flex;
   flex-direction: column;
 }
-.navSection {
-  height: 100%;
-  width: 20%;
-}
 
 .wrapper {
-  display: flex;
+  flex: 1;
   height: 100%;
-  position: relative;
+  background-color: #faf9ee;
+  display: flex;
+  flex-direction: row;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }

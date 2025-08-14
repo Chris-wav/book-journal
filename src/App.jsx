@@ -1,13 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header.jsx";
 import "./App.css";
 import NavBar from "./components/Navbar.jsx";
-import Library from "./components/Library.jsx";
+import LibraryHome from "./components/LibraryHome.jsx";
 
 function App() {
-  const [libraryBooks, setLibraryBooks] = useState([]);
+  const [libraryBooks, setLibraryBooks] = useState(() => {
+    try {
+      const data = localStorage.getItem("libraryBooks");
+      return data ? JSON.parse(data) : [];
+    } catch (error) {
+      console.error("Error parsing libraryBooks from localStorage:", error);
+      return [];
+    }
+  });
+
   const [searchInput, setSearchInput] = useState("");
   const [activeSection, setActiveSection] = useState("library");
+
+  useEffect(() => {
+    localStorage.setItem("libraryBooks", JSON.stringify(libraryBooks));
+    console.log(libraryBooks);
+  }, [libraryBooks]);
 
   return (
     <div className="appContainer">
@@ -17,11 +31,7 @@ function App() {
           activeSection={activeSection}
           setActiveSection={setActiveSection}
         />
-        <Library
-          activeSection={activeSection}
-          libraryBooks={libraryBooks}
-          setLibraryBooks={setLibraryBooks}
-        />
+        <LibraryHome />
       </div>
     </div>
   );

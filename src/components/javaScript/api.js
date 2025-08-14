@@ -26,9 +26,13 @@ function debounce(func, delay) {
 }
 
 export async function searchBook(input) {
+  let queryParts = [];
+  input.title ? queryParts.push(input.title) : null;
+  input.author ? queryParts.push(input.author) : null;
+  let query = queryParts.join("+");
   try {
     const response = await fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${input}&key=${apiKey}`
+      `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}`
     );
     if (!response.ok) {
       throw new Error("Network problem:" + response.status);

@@ -1,0 +1,180 @@
+.shelfList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Κάθε ράφι */
+.shelfRow {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: #f8f5f2;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+/* Τίτλος του ραφιού */
+.shelfTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Είδος */
+.shelfGenre {
+  font-size: 1rem;
+  color: #777;
+  margin: 0;
+}
+
+/* Περιεχόμενο (π.χ. αριθμός βιβλίων) */
+.cardContent {
+  margin-top: 0.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Κουμπί */
+.viewButton {
+  align-self: center;
+  margin-top: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #dfe7dc;
+  color: #333;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.viewButton:hover {
+  background-color: #c5d4c2;
+}
+.shelfList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.shelfRow {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: #f8f5f2;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  transform: translateX(0);
+
+  /* ✅ Μεταφέρθηκε εδώ */
+  transition: all 0.8s ease;
+}
+
+.shelfRow:hover {
+  background-color: #ebe7e2;
+  border-left: 4px solid #a2af9b;
+  box-shadow: 0 6px 12px rgba(162, 175, 155, 0.1);
+  transform: translateX(5px);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.shelfTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.shelfGenre {
+  font-size: 1rem;
+  color: #777;
+  margin: 0;
+}
+
+.cardContent {
+  margin-top: 0.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: #555;
+  justify-content: space-between;
+}
+
+.viewButton {
+  width: 109px;
+  margin-top: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #dfe7dc;
+  color: #333;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.viewButton:hover {
+  background-color: #c5d4c2;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.removeBtn {
+  padding: 0.5rem 1rem;
+  background-color: #e57373; /* απαλή κόκκινη απόχρωση */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(229, 115, 115, 0.4);
+}
+
+.removeBtn:hover {
+  background-color: #d32f2f;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.6);
+}
+
+.removeBtn:active {
+  background-color: #b71c1c;
+  box-shadow: 0 1px 3px rgba(183, 28, 28, 0.8);
+  transform: scale(0.97);
+}
+h1 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 1.2px;
+}
