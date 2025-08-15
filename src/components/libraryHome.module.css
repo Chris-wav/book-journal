@@ -25,9 +25,12 @@
   font-size: 1.2rem;
   color: #555;
   margin-top: 1rem;
+  align-self: flex-start;
+  margin-left: 12px;
 }
 
 .createShelfButton {
+  align-self: flex-start;
   height: 80px;
   margin: 15px;
   background-color: #b4d4b0;
@@ -107,6 +110,7 @@
 .shelfWrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .modalBackdrop {
